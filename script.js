@@ -27,5 +27,17 @@ function addSubmission(array, newName, newScore, newDate) {
 function deleteSubmissionByIndex(array, index) {
   array.splice(index, 1);
 }
-deleteSubmissionByIndex(submissions, 0);
+// deleteSubmissionByIndex(submissions, 0);
+// console.log(submissions);
+
+// Declare a function named deleteSubmissionByName
+// Parameter(s): array, name
+// Functionality: remove the object from the array that has the provided name.  Incorporate the findIndex method and the splice method.
+
+function deleteSubmissionByName(array, name) {
+  const index = array.findIndex((submission) => submission.name === name);
+
+  array.splice(index, 1);
+}
+deleteSubmissionByName(submissions, "Jill");
 console.log(submissions);
