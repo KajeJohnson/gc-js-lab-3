@@ -19,3 +19,13 @@ function addSubmission(array, newName, newScore, newDate) {
 }
 // addSubmission(submissions, "James", 73, "2021-04-26");
 // console.log(submissions);
+
+// Declare a function named deleteSubmissionByIndex
+// Parameter(s): array, index
+// Functionality: remove the object from the array at the specified index using the splice method.
+
+function deleteSubmissionByIndex(array, index) {
+  array.splice(index, 1);
+}
+deleteSubmissionByIndex(submissions, 0);
+console.log(submissions);
