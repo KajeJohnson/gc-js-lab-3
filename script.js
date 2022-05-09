@@ -14,7 +14,7 @@ function addSubmission(array, newName, newScore, newDate) {
     passed: newPassed,
   });
 }
-// addSubmission(submissions, "James", 73, "2021-04-26");
+addSubmission(submissions, "James", 73, "2021-04-26");
 // console.log(submissions);
 
 function deleteSubmissionByIndex(array, index) {
@@ -31,14 +31,9 @@ function deleteSubmissionByName(array, name) {
 // deleteSubmissionByName(submissions, "Jill");
 // console.log(submissions);
 
-// Declare a function named editSubmission
-// Parameter(s): array, index, score
-// Functionality: update an object’s score in the array at the specified index. Use conditional statements to set the value for the passed property to true if the score is greater than or equal to 60 and false otherwise.
-
 function editSubmission(array, index, score) {
-  // const score = array.findIndex((submission) => submission.index)
   array[index].score = score;
-  array[index].passed = passed >= 60 ? true : false;
+  array[index].passed = score >= 60;
 }
 
 // editSubmission(submissions, 2, 65);
@@ -95,4 +90,4 @@ function filter90AndAbove(array) {
   return array.filter((item) => item.score >= 90);
 }
 
-console.log(filter90AndAbove(submissions));
+// console.log(filter90AndAbove(submissions));
