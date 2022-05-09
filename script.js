@@ -5,9 +5,6 @@ let submissions = [
   { name: "Jill", score: 88, date: "2020-04-22", passed: true },
 ];
 
-// Parameter(s): array, newName, newScore, newDate
-// Functionality: construct an object and push it into the array. The object must have the same properties as the objects already in the array. Use conditional statements to set the value for the passed property to true if the score is greater than or equal to 60 and false otherwise.
-
 function addSubmission(array, newName, newScore, newDate) {
   let newPassed = newScore >= 60;
   array.push({
@@ -20,24 +17,27 @@ function addSubmission(array, newName, newScore, newDate) {
 // addSubmission(submissions, "James", 73, "2021-04-26");
 // console.log(submissions);
 
-// Declare a function named deleteSubmissionByIndex
-// Parameter(s): array, index
-// Functionality: remove the object from the array at the specified index using the splice method.
-
 function deleteSubmissionByIndex(array, index) {
   array.splice(index, 1);
 }
 // deleteSubmissionByIndex(submissions, 0);
 // console.log(submissions);
 
-// Declare a function named deleteSubmissionByName
-// Parameter(s): array, name
-// Functionality: remove the object from the array that has the provided name.  Incorporate the findIndex method and the splice method.
-
 function deleteSubmissionByName(array, name) {
   const index = array.findIndex((submission) => submission.name === name);
 
   array.splice(index, 1);
 }
-deleteSubmissionByName(submissions, "Jill");
+// deleteSubmissionByName(submissions, "Jill");
+// console.log(submissions);
+
+// Declare a function named editSubmission
+// Parameter(s): array, index, score
+// Functionality: update an object’s score in the array at the specified index. Use conditional statements to set the value for the passed property to true if the score is greater than or equal to 60 and false otherwise.
+
+function editSubmission(array, index, score) {
+  // const score = array.findIndex((submission) => submission.index)
+  array[index].score = score;
+  array[index].passed = passed >= 60 ? true : false;
+}
 console.log(submissions);
