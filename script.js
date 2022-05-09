@@ -83,8 +83,16 @@ function findAverageScore(array) {
   return average / array.length;
 }
 
-console.log(findAverageScore(submissions));
+// console.log(findAverageScore(submissions));
 
-function filterPassing(array) {}
+function filterPassing(array) {
+  return array.filter((item) => item.passed === true);
+}
 
-function filter90AndAbove(array) {}
+// console.log(filterPassing(submissions));
+
+function filter90AndAbove(array) {
+  return array.filter((item) => item.score >= 90);
+}
+
+console.log(filter90AndAbove(submissions));
