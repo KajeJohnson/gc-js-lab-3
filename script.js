@@ -72,9 +72,18 @@ function findLowestScore(array) {
   }
 }
 
-console.log(findLowestScore(submissions));
+// console.log(findLowestScore(submissions));
 
-function findAverageScore(array) {}
+function findAverageScore(array) {
+  let average = 0;
+
+  for (let item of array) {
+    average += item.score;
+  }
+  return average / array.length;
+}
+
+console.log(findAverageScore(submissions));
 
 function filterPassing(array) {}
 
