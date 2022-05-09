@@ -44,10 +44,6 @@ function editSubmission(array, index, score) {
 // editSubmission(submissions, 2, 65);
 // console.log(submissions);
 
-// Declare a function named findSubmissionByName
-// Parameter(s): array, name
-// Functionality: return the object in the array that has the provided name. Use the find method.
-
 function findSubmissionByName(array, name) {
   const findStudent = array.find((item) => {
     return item.name === name;
@@ -59,28 +55,27 @@ function findSubmissionByName(array, name) {
     return "No student with that name is found.";
   }
 }
-console.log(findStudent("Jill"));
+// console.log(findStudent("Jill"));
+//This doesn't work - figure out how to ask for that
 
-// Declare a function named findLowestScore
-// Parameter(s): array
-// Functionality: return the object in the array that has the lowest score. Use the forEach method to loop through the whole array.
+function findLowestScore(array) {
+  if (array.length > 0) {
+    let lowestScore = array[0];
+    array.forEach((item) => {
+      if (lowestScore.score > item.score) {
+        lowestScore = item;
+      }
+    });
+    return lowestScore;
+  } else {
+    console.log("Not an array.");
+  }
+}
 
-function findLowestScore(array) {}
-
-// Declare a function named findAverageScore
-// Parameter(s): array
-// Functionality: return the average quiz score.  Use a for...of loop.
+console.log(findLowestScore(submissions));
 
 function findAverageScore(array) {}
 
-// Declare a function named filterPassing
-// Parameter(s): array
-// Functionality: return a new array using the filter method. The filter method should find objects in the array that have passing scores.
-
 function filterPassing(array) {}
-
-// Declare a function named filter90AndAbove
-// Parameter(s): array
-// Functionality: return a new array using the filter method. The filter method should find objects in the array that have scores greater than or equal to 90.
 
 function filter90AndAbove(array) {}
